@@ -1,6 +1,8 @@
 <link rel="import" href="../paper-card/paper-card.html">
+<polymer-element id="paperCardOnFire" name="paper-cards-on-fire" noscript attributes="app data cards">
 
-<template repeat="{{x in $.globals.values.listings}}">
+<template>
+<template repeat="{{x in cards}}">
 <paper-card flex heading="{{data[x].value}}">
 <div id="cardtitle" style="width:180px">
   <h3> 
@@ -12,3 +14,6 @@
 </div>
 </paper-card>
 </template>
+</template>
+
+</polymer-element>
