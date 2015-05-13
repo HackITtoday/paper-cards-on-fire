@@ -1,9 +1,13 @@
 <link rel="import" href="../paper-card/paper-card.html">
 
-<polymer-element id="paperCardOnFire" name="paper-cards-on-fire" noscript attributes="data keys">
+<polymer-element id="paperCardOnFire" name="paper-cards-on-fire" attributes="data keys">
   <template>
     <style>
-      
+      :host {
+        position: relative;
+        display: block;
+        height: 100%;
+      }
       paper-card {
         font-family: Roboto, Helvetica, Arial, sans-serif;
         width: 300px;
@@ -38,5 +42,10 @@
       </paper-card>
     </template>
   </template>
-
+  <script>
+    Polymer('paper-cards-on-fire',{
+      ready: function() { console.log('cards ready');
+      }
+    });
+  </script>
 </polymer-element>
