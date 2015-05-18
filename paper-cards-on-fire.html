@@ -9,14 +9,10 @@
         display: block;
         height: 100%;
       }
-      .container {
-        display:flex;
-        flex-wrap:wrap;
-        align-content:stretch;
-      }
       paper-card {
         font-family: Roboto, Helvetica, Arial, sans-serif;
 	font-weight: 300;
+        width:300px;
         height: 120px;
         margin: 5px 5px 5px 0;
         padding-right:130px; /* img width + 10px */
@@ -39,19 +35,15 @@
         margin-left: 240px;
       }
     </style>
-    <div class="container">
+    <center>
       <template repeat="{{x in keys}}">
        <a href="{{data[x].url}}">
         <paper-card flex heading="{{data[x].value}}">
-          <div id="cardtitle">
-            <h3> 
-            </h3>
-          </div>
           <img src="https://sdyrcs.cloudimage.io/s/crop/120x120/{{ data[x].image }}">
          </paper-card>
         </a>
       </template>
-    </div>
+    </center>
   </template>
   <script>
     Polymer('paper-cards-on-fire',{
