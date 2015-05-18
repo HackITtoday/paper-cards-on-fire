@@ -9,13 +9,22 @@
         display: block;
         height: 100%;
       }
+      a {
+        width:360px;
+        height: 120px;
+      }
       paper-card {
         font-family: Roboto, Helvetica, Arial, sans-serif;
 	font-weight: 300;
         width:300px;
+       /* position:absolute; */
         height: 120px;
         margin: 5px 5px 5px 0;
         padding-right:130px; /* img width + 10px */
+      }
+      paper-card::shadow .header h1 {
+        font-weight: 300;
+        position:absolute; /* style bug header two line */ 
       }
       paper-card img {
         position:absolute;right:0;top:0;
